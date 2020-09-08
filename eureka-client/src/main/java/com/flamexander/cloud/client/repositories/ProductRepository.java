@@ -18,6 +18,7 @@ public class ProductRepository {
     }
 
     public Product save(Product product) {
+        product.setId(products.size() + 1L);
         products.add(product);
         return product;
     }

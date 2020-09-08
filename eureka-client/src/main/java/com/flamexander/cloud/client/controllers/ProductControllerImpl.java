@@ -35,8 +35,16 @@ public class ProductControllerImpl implements ProductController {
         return productService.findAll();
     }
 
-//    @GetMapping("/parametrized/{id}")
-//    public String parametrized(@PathVariable(value = "id") String id) {
-//        return "echo: " + id;
-//    }
+    @Override
+    @PostMapping("/add_for_repo")
+    public String saveOrUpdate(ProductDto productDto) {
+        productService.saveOrUpdate(productDto);
+        return "rest ololo";
+    }
+
+    @Override
+    @GetMapping("/delete_for_repo/{id}")
+    public void deleteById(@PathVariable Long id) {
+        productService.deleteById(id);
+    }
 }

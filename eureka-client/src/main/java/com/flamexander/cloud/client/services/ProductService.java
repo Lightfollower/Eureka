@@ -23,6 +23,11 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    public Product saveOrUpdate(ProductDto productDto) {
+        Product product = new Product(productDto.getId(), productDto.getTitle(), productDto.getPrice());
+        return productRepository.save(product);
+    }
+
     public Product findById(Long id) {
         return productRepository.findById(id);
     }
