@@ -1,6 +1,6 @@
-package com.flamexander.cloud.client.repositories;
+package com.geekbrains.cloud.client.repositories;
 
-import com.flamexander.cloud.client.entities.Product;
+import com.geekbrains.cloud.client.entities.Product;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;

@@ -1,4 +1,4 @@
-package com.flamexander.cloud.client.entities;
+package com.geekbrains.cloud.client.entities;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

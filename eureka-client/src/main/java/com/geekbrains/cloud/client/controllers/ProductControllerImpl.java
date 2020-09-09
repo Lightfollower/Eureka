@@ -1,7 +1,7 @@
-package com.flamexander.cloud.client.controllers;
+package com.geekbrains.cloud.client.controllers;
 
-import com.flamexander.cloud.client.services.ProductService;
-import com.flamexander.cloud.common.dto.ProductDto;
+import com.geekbrains.cloud.client.services.ProductService;
+import com.geekbrains.cloud.common.dto.ProductDto;
 import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,8 +30,8 @@ public class ProductControllerImpl implements ProductController {
 //    private String username;
 
     @Override
-    @RequestMapping("/products")
-    public List<ProductDto> greeting() {
+    @RequestMapping("/productsREST")
+    public List<ProductDto> getProductsREST() {
         return productService.findAll();
     }
 

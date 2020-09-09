@@ -1,6 +1,6 @@
-package com.flamexander.cloud.client.feign;
+package com.geekbrains.cloud.client.feign;
 
-import com.flamexander.cloud.common.dto.ProductDto;
+import com.geekbrains.cloud.common.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,9 +17,9 @@ public class FrontController {
         this.frontClient = frontClient;
     }
 
-    @RequestMapping("/get-greeting")
-    public String greeting(Model model) throws IOException {
-        List<ProductDto> productDtos = frontClient.greeting();
+    @RequestMapping("/products")
+    public String getProducts(Model model){
+        List<ProductDto> productDtos = frontClient.getProductsREST();
         model.addAttribute("products", productDtos);
         return "all_products";
     }
@@ -32,12 +32,12 @@ public class FrontController {
     @PostMapping("/add")
     public String saveNewProduct(@ModelAttribute ProductDto product) {
         frontClient.saveOrUpdate(product);
-        return "redirect:/get-greeting";
+        return "redirect:/products";
     }
 
     @GetMapping("delete/{id}")
     public String deleteProduct(@PathVariable Long id){
         frontClient.deleteById(id);
-        return "redirect:/get-greeting";
+        return "redirect:/products";
     }
 }

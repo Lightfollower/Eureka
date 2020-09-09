@@ -1,14 +1,13 @@
-package com.flamexander.cloud.client.controllers;
+package com.geekbrains.cloud.client.controllers;
 
-import com.flamexander.cloud.common.dto.ProductDto;
-import org.springframework.http.ResponseEntity;
+import com.geekbrains.cloud.common.dto.ProductDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 public interface ProductController {
-    @RequestMapping("/products")
-    List<ProductDto> greeting();
+    @RequestMapping("/productsREST")
+    List<ProductDto> getProductsREST();
 
     @PostMapping("/add_for_repo")
     String saveOrUpdate(@RequestBody ProductDto productDto);

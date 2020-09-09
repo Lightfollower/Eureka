@@ -1,4 +1,4 @@
-package com.flamexander.cloud.client;
+package com.geekbrains.cloud.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

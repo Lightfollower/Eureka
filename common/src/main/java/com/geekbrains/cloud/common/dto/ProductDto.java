@@ -1,4 +1,4 @@
-package com.flamexander.cloud.common.dto;
+package com.geekbrains.cloud.common.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

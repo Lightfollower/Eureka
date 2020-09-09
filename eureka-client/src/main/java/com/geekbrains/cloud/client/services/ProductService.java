@@ -1,11 +1,10 @@
-package com.flamexander.cloud.client.services;
+package com.geekbrains.cloud.client.services;
 
-import com.flamexander.cloud.client.entities.Product;
-import com.flamexander.cloud.client.repositories.ProductRepository;
-import com.flamexander.cloud.common.dto.ProductDto;
+import com.geekbrains.cloud.client.entities.Product;
+import com.geekbrains.cloud.client.repositories.ProductRepository;
+import com.geekbrains.cloud.common.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
